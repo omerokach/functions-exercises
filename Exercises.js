@@ -55,7 +55,22 @@ function myPower(x, n) {
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
-  return "";
+  let count = 1;
+  let num = str[0];
+  for(let i=0; i<str.length; i++){
+    for(let k= 0; k<str.length; k++){
+      if(str[i] === str[k]){
+        count++;
+        console.log(count);
+      }
+    }
+    if(count === 2 ){
+      num = str[i];
+      return num;
+    }
+    count = 1;
+  }
+  return num;
 }
 
 //Question 6 (Bonus)
@@ -67,7 +82,7 @@ function isPrefectNumber(num) {
 // *** Playground ***
 // Feel free to run and test your code here on your own
 let x = "omer rokach";
-console.log(myPower(2,));
+console.log(getFirstNotRepeating("abawcddbec"));
 
 // *** End of Playground ***
 
