@@ -29,7 +29,17 @@ function allCombinations(str) {
 //Question 3
 function allCaps(str) {
   // your code here
-  return "";
+  let newStr = '';
+  for(let i=0; i<str.length; i++){
+    if(i === 0){
+    newStr += str.charAt(0).toUpperCase();
+    } else if(str.charAt(i-1) === " "){
+      newStr += str.charAt(i).toUpperCase();
+    }else {
+      newStr += str.charAt(i);
+    }
+  }
+  return newStr;
 }
 
 //Question 4
@@ -52,8 +62,9 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-let x = "omer";
-console.log(allCombinations(x));
+let x = "omer rokach";
+console.log(allCaps(x));
+
 // *** End of Playground ***
 
 // Don't touch me :)
