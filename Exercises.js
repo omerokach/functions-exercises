@@ -12,8 +12,16 @@ function myReverse(str) {
 //Question 2
 function allCombinations(str) {
   let combinations = [];
+  let comb;
   // your code here
-
+  for(let i=0; i<str.length-1; i++){
+    comb = str[i];
+    combinations.push(str[i]);
+    for(let k=i+1; k<str.length; k++){
+     comb += str[k];
+     combinations.push(comb);
+    }
+  }
   //
   return combinations;
 }
@@ -44,8 +52,8 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-let x = "";
-console.log(myReverse(x));
+let x = "omer";
+console.log(allCombinations(x));
 // *** End of Playground ***
 
 // Don't touch me :)
