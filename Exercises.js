@@ -45,7 +45,11 @@ function allCaps(str) {
 //Question 4
 function myPower(x, n) {
   // your code here
-  return "";
+  let num = x
+  for(let i=1; i<n; i++){
+    num *= x;
+  }
+  return num;
 }
 
 //Question 5
@@ -63,7 +67,7 @@ function isPrefectNumber(num) {
 // *** Playground ***
 // Feel free to run and test your code here on your own
 let x = "omer rokach";
-console.log(allCaps(x));
+console.log(myPower(2,));
 
 // *** End of Playground ***
 
