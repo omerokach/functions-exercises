@@ -1,7 +1,12 @@
+"use strict"
 //Question 1
 function myReverse(str) {
   // your code here
-  return "";
+  let newStr = '';
+  for(let i=str.length-1 ; i>-1; i--){
+    newStr += str[i];
+  }
+  return newStr;
 }
 
 //Question 2
@@ -39,7 +44,8 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-
+let x = "";
+console.log(myReverse(x));
 // *** End of Playground ***
 
 // Don't touch me :)
