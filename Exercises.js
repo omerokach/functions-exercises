@@ -61,7 +61,6 @@ function getFirstNotRepeating(str) {
     for(let k= 0; k<str.length; k++){
       if(str[i] === str[k]){
         count++;
-        console.log(count);
       }
     }
     if(count === 2 ){
@@ -76,13 +75,20 @@ function getFirstNotRepeating(str) {
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
   // your code here
-  return "I'm not interested in the bonus question :(";
+  let sumNum = 0;
+  for(let i=1; i<num; i++){
+    if( num%i === 0 ){
+      sumNum += i;
+    }
+  }
+  if(sumNum === num)
+  return true;
+  return false;
 }
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-let x = "omer rokach";
-console.log(getFirstNotRepeating("abawcddbec"));
+console.log(isPrefectNumber(28));
 
 // *** End of Playground ***
 
